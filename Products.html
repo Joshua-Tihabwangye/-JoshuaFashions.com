@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Fashions</title>
+    <meta.name="description" contente="JOSHUA FASHIONS">
+    <title>JOSHUA FASHIONS</title>
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="H.jpg/x-icon" href="/H.jpg/favicon.ico">
+    <!-- CSS format of inserting sizes of images,borders, and margin, then color of words and font of words -->
     <style>
+        .img {
+            background-color:aqua;
+            background-size: 50%;
+            background-repeat: repeat;
+        }
+        .title {
+            font-weight: bold;
+            color: black;
+            font-style: initial;
+            background-color:auto;
+            font-size: 200%;
+        }
+        h3{
+            color: hsl(303, 87%, 53%);
+            text-align:center;
+        }
+        .background {
+            color: #718f8fcd;
+        }
+        p {
+            color:auto;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .DIV2{
+            margin-left: 30%;
+        }
         /*Creating a navigation bar with a black background and with splited options and help option using CSS*/
         .Xender {
             background-color:black;
@@ -63,27 +91,8 @@
             background-color:auto;
             color: #049efe;
         }
-        .Header {
-            font-size: x-large;
-            font-weight: bolder;
-            color: black;
-            font-style: oblique;
-            text-align: center;
-        }
-        .Commodity {
-            font-size: medium;
-            font-weight: medium;
-            color: black;
-            font-style: italic;
-        }
-        .SpaceX {
-            font-size: medium;
-            font-weight: medium;
-            color: black;
-            font-style: normal;
-        }
-        /*Inserting navigation keys like next or back with colour*/
-        .XXX {
+         /*Inserting navigation keys like next or back with colour*/
+         .XXX {
             background-color:black;
             overflow:40%;
         }
@@ -100,10 +109,30 @@
             background-color: lightgreen;
             color: hsl(60, 4%, 5%);       
         }
-
+       
+             /*Inserting navigation keys like next or back with colour to the right*/
+         .YYY {
+            background-color:black;
+            overflow:40%;
+        }
+        .YYY a {
+            float:right; 
+            color:hsl(245, 98%, 50%);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: large;
+            font-weight: bolder;
+        }
+        .YYY a:hover{
+            background-color: lightgreen;
+            color: hsl(60, 4%, 5%);       
+        }
+        
     </style>
+    <br>
 </head>
-<body>
+<body class="img">
     <div class="Xender">
         <a href="index.html">Home Page</a>
         <a href="About Us.html">About Us</a>
@@ -112,29 +141,26 @@
         <a class="split">Help</a>
     </div>
     <br>
-   <div class="Header">
-    <p>WELCOME TO JOSHUA FASHIONS</p>
-    <p>Let people admire you</p>
-   </div>
-   <div class="Commodity">
-    <p>We have got you covered with a wide range of commodities, ranging from;</p>
-    <ul>
-        <li>Shoes</li>
-        <li>Shirts</li>
-        <li>Trousers</li>
-        <li>Bags of all types</li>
-        <li>Beddings</li>
-        <li>Cartains</li>
-        <li>Stockings</li>
-        <li>Wall hangings</li>
-        <li>Carpets</li>
-    </ul>
-   </div>
-   <div class="SpaceX">
-    <p>You can trade with us via online or physically</p>
-    <p>We hornour your coming.</p>
-    <p>You can continue to the next pages our beloved customer.</p>
-   </div>
+    <p class="title"> WELCOME TO JOSHUA FASHIONS</p>
+    <p style="color: purple; font-size: 130%;"> Let people admire you</p>
+    <!--These codes below are showing -->
+    <br>
+    <p> We are located along Bakunda close-Tubba cell-Kulambilo-Kisaasi zone- Kampala Uganda</p>
+    <p> Place your order and we deliver to you at affordable prices</p>
+    <p> We have a varriety of commodities it's your choice to be smart</p>
+    <!--Here we are going to add pictures in our website-->
+    <br>
+    <h3 class="X-MEN"> MEN'S SUITS </h3>
+    <DIV2>
+    <img src="suit 1.jpg" style="width: 10%;height: 10%;border-radius: 50%"s> <img src="suit2.jpg" style="width:10%;height:10%;border-radius: 50%"> <img src="suit3.jpg" style="width:10%;height:10%;border-radius: 50%"> <img src="G.jpg" style="width:10%;height:10%;border-radius: 50%"> <img src="suit4.jpg" style="width:10%;height:10%;border-radius: 50%">
+    </DIV2>
+    <br>
+    <h3 class="MEN">MEN'S SHIRTS</h3>
+    <DIV2>
+     <img src="E.jpg" style="width:10%;height:10%; border-radius:50%;"> <img src="F.jpg" style="width:10%;height:30%; border-radius: 50%;"> <img src="G.jpg" style="width:10%;height:40%;border-radius: 50%;" > <img src="H.jpg" style="width:10%;height:10%;border-radius: 50%"> <img src="K.jpg" style="width:10%;height:10%;border-radius: 50%">
+    </DIV2>
+     <br>
+
 <!--The social media icon bar-->
 <footer align="center">
     <a href="https://www.facebook.com/Joshua T Walker" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -144,7 +170,10 @@
     <a href="https://t.me/Joshua Walker" class="telegram"><i class="fa fa-telegram"></i></a>
 </footer>
 <div class="XXX">
-<a href="Products.html">Next Page</a>
-</div>
+    <a href="index.html">Go back to previous</a>
+    </div>
+    <div class="YYY">
+        <a href="About Us.html">Next Page</a>
+        </div>
 </body>
 </html>
