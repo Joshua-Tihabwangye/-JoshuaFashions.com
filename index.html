@@ -101,6 +101,73 @@
             color: hsl(60, 4%, 5%);       
         }
 
+         /* Slideshow container. This container acts as a module or as a container as it's name.
+        It is the one holding any design made in the slide show*/
+
+.slideshow-container {
+  max-width: 30%;
+  position: relative;
+  float: right;
+  margin-right: 20%;
+  margin-top: -30%;
+}
+/* Caption text. This is used to design the caption on the pics aded to the slide show. */
+.text {
+  color:purple;
+  font-size: larger;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  font-style: italic;
+
+}
+
+/* Number text (1/3 etc).This indicates the number of pics in the slide show created */
+.numbertext {
+  color:black;
+  font-size:medium;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators.These indicate the slide show that they are moving */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-left: 47%;
+  margin-top: 0.3%;
+  background-color:rgb(11, 3, 251);
+  border-radius: 50%;
+  display: block;
+  transition: background-color 0.6s ease;
+}
+
+/*This one is used in changing the color of the active pic*/
+.active {
+  background-color: #ff03ff;
+}
+
+/* Fading animation.This helps us to set animation styles.*/
+.Zoom {
+  animation-name:Zoom In/Out;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 50%) {
+  .text {font-size: large}
+}
+
+
     </style>
 </head>
 <body>
@@ -135,6 +202,64 @@
     <p>We hornour your coming.</p>
     <p>You can continue to the next pages our beloved customer.</p>
    </div>
+   <br>
+<!--We are going to add slide show pics in our website page index.html-->
+   <div class="slideshow-container">
+
+    <div class="mySlides Zoom">
+      <div class="numbertext">1 / 3</div>
+      <img src="B.jpg" style="width:100%">
+      <div class="text">i love this</div>
+    </div>
+    
+    <div class="mySlides Zoom">
+      <div class="numbertext">2 / 3</div>
+      <img src="K.jpg" style="width:100%">
+      <div class="text">double breast-white</div>
+    </div>
+    
+    <div class="mySlides Zoom">
+      <div class="numbertext">3 / 3</div>
+      <img src="H.jpg" style="width:100%">
+      <div class="text">double breast-black</div>
+    </div>
+    
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      <!--Here we are using Java Script to add in slide show pictures in our website.-->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        /*In here we are using the for loop to iterate several times that code to form the slide shows.
+        we are using the letter i as a counter in the loop, the index(i)++ is ussed to increment the loop until the condition in the if statement is false
+        Then we have the slide[i].style.display = "none" nwhich helps to hide the other images that are not the loop
+        We have the if statement in the codes below which is used in the checking if the index reaches the set number of index, if it reaches it stops.
+        The first line of code with the word dot is used to move the dots on the slide show with them where as the second line of code withe word dot is used to activate the dots\
+        The last line of the cthis Js code is used to set the duration which the slide show shall take.*/ 
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+        </script>
+   
 <!--The social media icon bar-->
 <footer align="center">
     <a href="https://www.facebook.com/Joshua T Walker" class="facebook"><i class="fa fa-facebook"></i></a>
